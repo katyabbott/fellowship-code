@@ -17,7 +17,7 @@ matplotlib.rcParams.update({'font.size': 16})
 
 ## User inputs
 nc_file = '../cosmo-output/eddy_tracks/rad050_lessthan500km/{}.nc' #User enters in file needed
-bermuda_nc = '/Users/katyabbott/Documents/Helen_Fellowship/Brown_Scholars_Internship/Bermuda/Data/tracks/{}.nc'
+bermuda_nc = '../../tracks/{}.nc'
 image_path = '../../../Helen_Fellowship/Posters_Presentations/ASLO_Poster/images/'
 #nc_file = '../input/original_input/nwat_ssh.0010.nc'
 cyc = True  #False if anticyclonic, True if cyclonic
@@ -291,13 +291,6 @@ plt.contourf(x1_m,y1_m,a_sigma, norm=MidpointNormalize(midpoint=0), cmap = 'Spec
 plt.colorbar(label = 'Normalized difference in eddy concentration', extend='min')
 plt.title('Difference between anticyclonic eddy concentrations \n in NWAT and satellite data')
 plt.savefig(image_path + 'sigma_anticyc.png', bbox_inches = 'tight')
-
-#Plot borders
-fig = plt.figure()
-plt.plot(lon[0], lat[0])
-plt.plot(lon[-1], lat[-1])
-plt.plot(lon[:,0], lat[:,0])
-plt.plot(lon[:,-1], lat[:,-1])
 
 
 
